@@ -1,0 +1,207 @@
+body {
+    /* DARK MODE BASE */
+    font-family: 'Georgia', serif; 
+    background: #121212; /* Very dark charcoal gray */
+    margin: 0;
+    padding: 0;
+    color: #f0f0f0; /* Near-white text for high contrast */
+}
+
+/* --- Accent Color Definition --- */
+/* Deep Emerald Green: #00A86B */
+/* Lighter Emerald: #00C87B */
+
+header {
+    /* Emerald gradient for a luxurious feel */
+    background: linear-gradient(90deg, #00A86B, #00C87B); 
+    color: #121212; /* Dark text on light header */
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+/* --- Controls Section --- */
+.controls {
+    max-width: 1200px;
+    margin: 20px auto 10px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.controls label {
+    margin-right: 10px;
+    color: #ddd; 
+}
+
+.controls select {
+    padding: 8px 12px;
+    border: 1px solid #333; 
+    border-radius: 6px;
+    background-color: #1e1e1e; /* Slightly lighter dark background for input */
+    color: #f0f0f0; 
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* --- Tabs Section --- */
+.tabs {
+    display: flex;
+    justify-content: center;
+    background: #1e1e1e; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #aaa; /* Lighter gray for inactive tabs */
+    transition: all 0.3s ease;
+}
+
+/* Emerald accent for active tab */
+.tabs button.active {
+    color: #00A86B; 
+    border-bottom: 3px solid #00A86B;
+    background: #121212; 
+}
+.tabs button:hover:not(.active) {
+    background: #252525;
+    color: #00C87B;
+}
+
+/* --- Package Container and Cards --- */
+.container {
+    display: none;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container.active {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #1e1e1e; 
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #333; 
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #00C87B; /* Brighter emerald for headings */
+    font-size: 1.4rem;
+    border-bottom: 2px solid #333; 
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #00A86B; /* Deep emerald price text */
+    margin: 10px 0 15px;
+}
+
+ul {
+    padding-left: 0;
+    margin: 10px 0 20px;
+    list-style: none;
+    color: #c0c0c0; 
+}
+
+ul li {
+    margin-bottom: 8px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.4;
+}
+
+/* Custom star marker in Emerald */
+ul li::before {
+    content: '★'; 
+    color: #00A86B; 
+    position: absolute;
+    left: 0;
+    font-size: 0.9rem;
+}
+
+/* --- Order Button --- */
+.order-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    padding: 12px 15px;
+    background: #00A86B; /* Deep Emerald Button */
+    color: #121212; /* Dark text on light button for pop */
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.1s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.order-btn:hover {
+    background: #00C87B;
+    transform: translateY(-2px);
+}
+
+/* Confirmation color change */
+.order-btn.confirmed {
+    background: #4CAF50; /* Standard success green */
+    pointer-events: none;
+}
+
+
+/* --- Footer --- */
+footer {
+    background: #1e1e1e; 
+    color: #888; 
+    text-align: center;
+    padding: 20px 15px;
+    margin-top: 40px;
+    font-size: 0.85rem;
+    border-top: 1px solid #333;
+}
+
+.footer-link {
+    color: #f0f0f0; 
+    text-decoration: none;
+    margin-left: 5px;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #00A86B;
+}
+
+.footer-link i {
+    margin-right: 5px;
+}
