@@ -154,11 +154,15 @@ header {
         transform: translateY(-10px) translateX(0);
         opacity: 0.8;
     }
+    70% {
+        opacity: 0.8; /* stays visible for most of the fall */
+    }
     100% {
-        transform: translateY(120%) translateX(30px);
-        opacity: 0.3;
+        transform: translateY(100%) translateX(30px); /* reaches bottom */
+        opacity: 0; /* fades out gradually */
     }
 }
+
 
 
 
