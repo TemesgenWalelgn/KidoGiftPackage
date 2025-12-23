@@ -99,16 +99,18 @@ header {
 }
 
 .christmas-header {
+    position: relative;
     background: linear-gradient(135deg, #b30000, #006400);
     color: white;
     text-align: center;
-    padding: 20px;
-    font-size: 22px;
+    padding: 40px 20px;
+    font-size: 28px;
     font-weight: bold;
-    position: relative;
     border-bottom: 5px solid gold;
-    overflow: hidden; /* keeps snow inside header */
+    overflow: hidden; /* ensures snowflakes stay within header */
 }
+
+
 
 .snow-container {
     position: absolute;
@@ -119,12 +121,17 @@ header {
     pointer-events: none;
 }
 
+/* Snowflake styling */
 .snowflake {
     position: absolute;
-    top: -10px;
+    top: -30px; /* start above header */
+    font-size: 24px;
     color: white;
-    opacity: 0.8;
-    animation: fall linear infinite;
+    user-select: none;
+    z-index: 2; /* above header text */
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 /* Individual snowflake positions and speeds */
@@ -149,20 +156,20 @@ header {
 .snowflake:nth-child(19){ left: 93%; font-size: 13px; animation-duration: 20.6s; }
 .snowflake:nth-child(20){ left: 97%; font-size: 14px; animation-duration: 22.1s; }
 
+/* Falling animation */
 @keyframes fall {
     0% {
-        transform: translateY(-10px) translateX(0);
-        opacity: 0.8;
+        transform: translateY(-30px) translateX(0);
+        opacity: 0;
     }
-    70% {
-        opacity: 0.8; /* stays visible for most of the fall */
+    10% {
+        opacity: 1;
     }
     100% {
-        transform: translateY(100%) translateX(30px); /* reaches bottom */
-        opacity: 0; /* fades out gradually */
+        transform: translateY(100%) translateX(20px);
+        opacity: 0;
     }
 }
-
 
 
 
