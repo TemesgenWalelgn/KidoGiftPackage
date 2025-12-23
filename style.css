@@ -128,12 +128,12 @@ header {
 }
 
 /* Individual snowflake positions and speeds */
-.snowflake:nth-child(1) { left: 2%; font-size: 12px; animation-duration: 6s; }
-.snowflake:nth-child(2) { left: 8%; font-size: 16px; animation-duration: 8s; }
-.snowflake:nth-child(3) { left: 15%; font-size: 14px; animation-duration: 7s; }
-.snowflake:nth-child(4) { left: 20%; font-size: 18px; animation-duration: 9s; }
-.snowflake:nth-child(5) { left: 28%; font-size: 12px; animation-duration: 6.5s; }
-.snowflake:nth-child(6) { left: 33%; font-size: 15px; animation-duration: 8.2s; }
+.snowflake:nth-child(1) { left: 2%; font-size: 12px; animation-duration: 10s; }
+.snowflake:nth-child(2) { left: 8%; font-size: 16px; animation-duration: 12s; }
+.snowflake:nth-child(3) { left: 15%; font-size: 14px; animation-duration: 9s; }
+.snowflake:nth-child(4) { left: 20%; font-size: 18px; animation-duration: 13s; }
+.snowflake:nth-child(5) { left: 28%; font-size: 12px; animation-duration: 8.5s; }
+.snowflake:nth-child(6) { left: 33%; font-size: 15px; animation-duration: 11.2s; }
 .snowflake:nth-child(7) { left: 40%; font-size: 14px; animation-duration: 7.3s; }
 .snowflake:nth-child(8) { left: 45%; font-size: 13px; animation-duration: 6.8s; }
 .snowflake:nth-child(9) { left: 50%; font-size: 17px; animation-duration: 9.5s; }
