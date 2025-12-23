@@ -50,6 +50,16 @@ function sortPackages(container = null) {
     cards.forEach(card => container.appendChild(card));
 }
 
+function showTab(tabId) {
+    const tabs = document.querySelectorAll('.tab-btn');
+    tabs.forEach(tab => tab.classList.remove('active')); // remove active from all
+    const activeTab = document.querySelector(`.tab-btn[onclick="showTab('${tabId}')"]`);
+    activeTab.classList.add('active'); // add active to clicked tab
+
+    const containers = document.querySelectorAll('.container');
+    containers.forEach(c => c.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+}
 
 // New Feature: Order Handler with Confirmation Feedback
 function handleOrder(event) {

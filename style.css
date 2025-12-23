@@ -49,21 +49,20 @@ header {
     font-size: 0.9rem;
     cursor: pointer;
 }
-
 /* --- Tabs Section --- */
 .tabs {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    gap: 10px;
-    padding: 10px;
+    gap: 12px;
+    padding: 12px;
     background: linear-gradient(90deg, #b30000, #006400);
     scrollbar-width: thin;
 }
 
 /* Chrome / Edge scrollbar */
 .tabs::-webkit-scrollbar {
-    height: 6px;
+    height: 8px; /* slightly bigger */
 }
 .tabs::-webkit-scrollbar-thumb {
     background: gold;
@@ -73,6 +72,30 @@ header {
 .tab-btn {
     white-space: nowrap;
     flex: 0 0 auto;
+    font-size: 18px;       /* bigger text */
+    padding: 12px 20px;    /* bigger buttons */
+    border-radius: 10px;
+    border: 2px solid gold;
+    background-color: #fff0; /* transparent initially */
+    color: gold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+/* Hover effect */
+.tab-btn:hover {
+    background-color: gold;
+    color: red;
+    transform: scale(1.05);
+}
+
+/* Active tab */
+.tab-btn.active {
+    background-color: gold;
+    color: red;
+    font-weight: bold;
+    transform: scale(1.05);
+    border: 2px solid red;
 }
 
 .christmas-header {
