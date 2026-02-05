@@ -88,11 +88,7 @@ function handleOrder(event) {
 document.addEventListener('DOMContentLoaded', () => {
     showTab('Valentine'); // set default tab
     
-    // Auto-scroll active tab into view
-    const activeTab = document.querySelector('.tab-btn.active');
-    if (activeTab) activeTab.scrollIntoView({ behavior: 'smooth', inline: 'center' });
-
-    // Attach the click handler to all 'Order Now' buttons
+       // Attach the click handler to all 'Order Now' buttons
     const orderButtons = document.querySelectorAll('.order-btn');
     orderButtons.forEach(button => {
         button.addEventListener('click', handleOrder);
