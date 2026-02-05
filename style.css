@@ -79,12 +79,20 @@ body {
 .tabs {
     display: flex;
     gap: 10px;
-    overflow-x: auto;
+    overflow-x: auto; /* allow horizontal scrolling */
     padding: 10px;
-    justify-content: center;
+    /* Remove justify-content: center; to prevent first tab from being hidden */
+    justify-content: flex-start; 
+    -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+    scrollbar-width: none; /* hide scrollbar in Firefox */
+}
+
+.tabs::-webkit-scrollbar {
+    display: none; /* hide scrollbar in Chrome/Safari */
 }
 
 .tab-btn {
+    flex: 0 0 auto; /* prevent buttons from shrinking */
     background: white;
     border: 2px solid var(--valentine-pink);
     color: var(--dark-red);

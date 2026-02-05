@@ -86,10 +86,16 @@ function handleOrder(event) {
 // Initialize on Page Load
 // ==========================
 document.addEventListener('DOMContentLoaded', () => {
-    // Set default tab
-    showTab('Valentine'); // Change this to your default container ID
+    showTab('Valentine'); // set default tab
+    
+    // Auto-scroll active tab into view
+    const activeTab = document.querySelector('.tab-btn.active');
+    if (activeTab) activeTab.scrollIntoView({ behavior: 'smooth', inline: 'center' });
 
-    // Attach order button handlers
+    // Attach the click handler to all 'Order Now' buttons
     const orderButtons = document.querySelectorAll('.order-btn');
-    orderButtons.forEach(button => button.addEventListener('click', handleOrder));
+    orderButtons.forEach(button => {
+        button.addEventListener('click', handleOrder);
+    });
 });
+
