@@ -1,289 +1,178 @@
+/* ====================================================
+   KIDO Flowers & Gift Shop – Valentine Theme
+   Author: Temesgen
+   Purpose: Romantic Valentine’s Day website styling
+==================================================== */
+
+/* ===== ROOT COLORS ===== */
+:root {
+    --valentine-red: #e63946;
+    --valentine-pink: #ffb3c6;
+    --soft-pink: #fff0f5;
+    --dark-red: #a4133c;
+    --text-dark: #3a0f1e;
+}
+
+/* ===== GLOBAL STYLES ===== */
 body {
-    /* DARK MODE BASE */
-    font-family: 'Georgia', serif; 
-    background: #121212; /* Very dark charcoal gray */
     margin: 0;
-    padding: 0;
-    color: #f0f0f0; /* Near-white text for high contrast */
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(to bottom, #fff0f5, #ffe5ec);
+    color: var(--text-dark);
 }
 
-/* --- Accent Color Definition --- */
-/* Deep Emerald Green: #00A86B */
-/* Lighter Emerald: #00C87B */
-
-header {
-    /* Emerald gradient for a luxurious feel */
-    background: linear-gradient(90deg, #00A86B, #00C87B); 
-    color: #121212; /* Dark text on light header */
-    padding: 30px 20px;
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
-}
-
-/* --- Controls Section --- */
-.controls {
-    max-width: 1200px;
-    margin: 20px auto 10px;
-    padding: 0 20px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.controls label {
-    margin-right: 10px;
-    color: #ddd; 
-}
-
-.controls select {
-    padding: 8px 12px;
-    border: 1px solid #333; 
-    border-radius: 6px;
-    background-color: #1e1e1e; /* Slightly lighter dark background for input */
-    color: #f0f0f0; 
-    font-size: 0.9rem;
-    cursor: pointer;
-}
-/* --- Tabs Section --- */
-.tabs {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 12px;
-    padding: 12px;
-    background: linear-gradient(90deg, #b30000, #006400);
-    scrollbar-width: thin;
-}
-
-/* Chrome / Edge scrollbar */
-.tabs::-webkit-scrollbar {
-    height: 8px; /* slightly bigger */
-}
-.tabs::-webkit-scrollbar-thumb {
-    background: gold;
-    border-radius: 10px;
-}
-
-.tab-btn {
-    white-space: nowrap;
-    flex: 0 0 auto;
-    font-size: 18px;       /* bigger text */
-    padding: 12px 20px;    /* bigger buttons */
-    border-radius: 10px;
-    border: 2px solid gold;
-    background-color: #fff0; /* transparent initially */
-    color: gold;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-/* Hover effect */
-.tab-btn:hover {
-    background-color: gold;
-    color: red;
-    transform: scale(1.05);
-}
-
-/* Active tab */
-.tab-btn.active {
-    background-color: gold;
-    color: red;
-    font-weight: bold;
-    transform: scale(1.05);
-    border: 2px solid red;
-}
-
-.christmas-header {
-    background: linear-gradient(135deg, #b30000, #006400);
+/* ===== HEADER ===== */
+.valentine-header {
+    background: linear-gradient(135deg, #e63946, #ff758f);
     color: white;
     text-align: center;
-    padding: 20px;
-    font-size: 22px;
+    padding: 25px 15px;
+    font-size: 26px;
     font-weight: bold;
     position: relative;
-    border-bottom: 5px solid gold;
-    overflow: hidden; /* keeps snow inside header */
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
-.snow-container {
+/* Floating hearts animation */
+.heart-container {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
     pointer-events: none;
 }
 
-.snowflake {
+.heart {
     position: absolute;
-    top: -10px;
-    color: white;
+    font-size: 18px;
+    animation: floatHearts 8s infinite ease-in-out;
     opacity: 0.8;
-    animation: fall linear infinite;
 }
 
-/* Individual snowflake positions and speeds */
-.snowflake:nth-child(1) { left: 2%; font-size: 12px; animation-duration: 25s; }
-.snowflake:nth-child(2) { left: 8%; font-size: 16px; animation-duration: 20s; }
-.snowflake:nth-child(3) { left: 15%; font-size: 14px; animation-duration: 18s; }
-.snowflake:nth-child(4) { left: 10%; font-size: 18px; animation-duration: 26s; }
-.snowflake:nth-child(5) { left: 28%; font-size: 12px; animation-duration: 18.5s; }
-.snowflake:nth-child(6) { left: 23%; font-size: 15px; animation-duration: 21.2s; }
-.snowflake:nth-child(7) { left: 30%; font-size: 14px; animation-duration: 17.3s; }
-.snowflake:nth-child(8) { left: 35%; font-size: 13px; animation-duration: 16.8s; }
-.snowflake:nth-child(9) { left: 40%; font-size: 17px; animation-duration: 23.5s; }
-.snowflake:nth-child(10){ left: 45%; font-size: 12px; animation-duration: 18.2s; }
-.snowflake:nth-child(11){ left: 50%; font-size: 16px; animation-duration: 12.1s; }
-.snowflake:nth-child(12){ left: 55%; font-size: 14px; animation-duration: 18.9s; }
-.snowflake:nth-child(13){ left: 60%; font-size: 15px; animation-duration: 15.8s; }
-.snowflake:nth-child(14){ left: 65%; font-size: 13px; animation-duration: 12.7s; }
-.snowflake:nth-child(15){ left: 70%; font-size: 16px; animation-duration: 11.3s; }
-.snowflake:nth-child(16){ left: 75%; font-size: 14px; animation-duration: 17.5s; }
-.snowflake:nth-child(17){ left: 78%; font-size: 12px; animation-duration: 12.4s; }
-.snowflake:nth-child(18){ left: 80%; font-size: 15px; animation-duration: 15.9s; }
-.snowflake:nth-child(19){ left: 83%; font-size: 13px; animation-duration: 20.6s; }
-.snowflake:nth-child(20){ left: 87%; font-size: 14px; animation-duration: 22.1s; }
+/* Different positions & delays */
+.heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+.heart:nth-child(2) { left: 20%; animation-delay: 2s; }
+.heart:nth-child(3) { left: 30%; animation-delay: 4s; }
+.heart:nth-child(4) { left: 50%; animation-delay: 1s; }
+.heart:nth-child(5) { left: 70%; animation-delay: 3s; }
+.heart:nth-child(6) { left: 90%; animation-delay: 5s; }
 
-@keyframes fall {
-    0% {
-        transform: translateY(-10px) translateX(0);
-        opacity: 0.8;
-    }
-    100% {
-        transform: translateY(120%) translateX(30px);
-        opacity: 0.3;
-    }
+@keyframes floatHearts {
+    0% { bottom: -20px; opacity: 0; transform: scale(0.8); }
+    50% { opacity: 1; }
+    100% { bottom: 120%; opacity: 0; transform: scale(1.2); }
 }
 
+/* ===== CONTROLS ===== */
+.controls {
+    background: white;
+    padding: 15px;
+    margin: 15px auto;
+    width: fit-content;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(230,57,70,0.15);
+}
 
+/* ===== TABS ===== */
+.tabs {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px;
+    justify-content: center;
+}
 
-/* --- Package Container and Cards --- */
+.tab-btn {
+    background: white;
+    border: 2px solid var(--valentine-pink);
+    color: var(--dark-red);
+    padding: 10px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+    background: var(--valentine-red);
+    color: white;
+    border-color: var(--valentine-red);
+    box-shadow: 0 6px 15px rgba(230,57,70,0.4);
+}
+
+/* ===== PACKAGES GRID ===== */
 .container {
     display: none;
-    padding: 0 20px;
-    max-width: 1200px;
-    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 25px;
 }
 
 .container.active {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
 }
 
+/* ===== PACKAGE CARDS ===== */
 .card {
-    background: #1e1e1e; 
-    border-radius: 15px;
-    padding: 25px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 2px solid #e6c200;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.4); 
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
-}
-
-.card h3 {
-    margin-top: 0;
-    color: #00C87B; /* Brighter emerald for headings */
-    font-size: 1.4rem;
-    border-bottom: 2px solid #333; 
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-}
-
-.card h3::after {
-    content: " 🎄";
-}
-
-
-.price {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #00A86B; /* Deep emerald price text */
-    margin: 10px 0 15px;
-}
-
-ul {
-    padding-left: 0;
-    margin: 10px 0 20px;
-    list-style: none;
-    color: #c0c0c0; 
-}
-
-ul li {
-    margin-bottom: 8px;
-    padding-left: 25px;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(230,57,70,0.15);
     position: relative;
-    line-height: 1.4;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
 }
 
-/* Custom star marker in Emerald */
-ul li::before {
-    content: '★'; 
-    color: #00A86B; 
-    position: absolute;
-    left: 0;
-    font-size: 0.9rem;
+/* Valentine glow on hover */
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--valentine-red);
+    box-shadow: 0 20px 40px rgba(230,57,70,0.35);
 }
 
-/* --- Order Button --- */
+/* Package title */
+.card h3 {
+    color: var(--valentine-red);
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Price */
+.price {
+    background: var(--soft-pink);
+    color: var(--dark-red);
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+/* Package list */
+.card ul {
+    padding-left: 20px;
+    line-height: 1.7;
+}
+
+/* ===== ORDER BUTTON ===== */
 .order-btn {
     display: block;
-    width: 100%;
     text-align: center;
     margin-top: 15px;
-    padding: 12px 15px;
-    background: linear-gradient(45deg, #c40000, #008000);
+    padding: 12px;
+    background: linear-gradient(135deg, #e63946, #ff758f);
     color: white;
-    font-weight: bold;
-    border-radius: 25px;
-    transition: transform 0.2s, box-shadow 0.2s;
     text-decoration: none;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
 }
 
 .order-btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px gold;
-}
-
-/* Confirmation color change */
-.order-btn.confirmed {
-    background: #4CAF50; /* Standard success green */
-    pointer-events: none;
-}
-
-
-/* --- Footer --- */
-footer {
-    background: #1e1e1e; 
-    color: #888; 
-    text-align: center;
-    padding: 20px 15px;
-    margin-top: 40px;
-    font-size: 0.85rem;
-    border-top: 1px solid #333;
-}
-
-.footer-link {
-    color: #f0f0f0; 
-    text-decoration: none;
-    margin-left: 5px;
-    transition: color 0.3s;
-}
-
-.footer-link:hover {
-    color: #00A86B;
-}
-
-.footer-link i {
-    margin-right: 5px;
+    box-shadow: 0 10px 25px rgba(230,57,70,0.5);
 }

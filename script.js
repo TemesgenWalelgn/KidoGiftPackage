@@ -99,7 +99,7 @@ function handleOrder(event) {
 // Set the default tab on page load and attach Telegram functionality
 document.addEventListener('DOMContentLoaded', () => {
     // Set default tab
-    showTab('beal'); 
+    showTab('Valentine'); 
     
     // Attach the click handler to all 'Order Now' buttons
     const orderButtons = document.querySelectorAll('.order-btn');
