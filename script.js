@@ -86,7 +86,7 @@ function handleOrder(event) {
 // Initialize on Page Load
 // ==========================
 document.addEventListener('DOMContentLoaded', () => {
-    showTab('setoch'); // set default tab
+    showTab('beal'); // set default tab
     
        // Attach the click handler to all 'Order Now' buttons
     const orderButtons = document.querySelectorAll('.order-btn');
@@ -94,4 +94,15 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', handleOrder);
     });
 });
+//image click popup
+function openImage(img){
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
 
+    modal.style.display = "flex";
+    modalImg.src = img.src;
+}
+
+function closeImage(){
+    document.getElementById("imageModal").style.display = "none";
+}

@@ -1,30 +1,31 @@
 /* ====================================================
-   KIDO Flowers & Gift Shop – Valentine Theme
+   KIDO Flowers & Gift Shop – Fasika (Easter) Theme
    Author: Temesgen
-   Purpose: Romantic Valentine’s Day website styling
+   Purpose: Ethiopian Fasika Holiday website styling
 ==================================================== */
 
 /* ===== ROOT COLORS ===== */
 :root {
-    --valentine-red: #e63946;
-    --valentine-pink: #ffb3c6;
-    --soft-pink: #fff0f5;
-    --dark-red: #a4133c;
-    --text-dark: #3a0f1e;
+    --fasika-gold: #f4c430;
+    --fasika-green: #6ab04c;
+    --fasika-light: #fffdf2;
+    --fasika-purple: #8e44ad;
+    --soft-green: #f0ffe6;
+    --text-dark: #3b2f2f;
 }
 
 /* ===== GLOBAL STYLES ===== */
 body {
     margin: 0;
     font-family: "Poppins", Arial, sans-serif;
-    background: linear-gradient(to bottom, #fff0f5, #ffe5ec);
+    background: linear-gradient(to bottom, #fffdf2, #f0ffe6);
     color: var(--text-dark);
 }
 
 /* ===== HEADER ===== */
 .valentine-header {
-    background: linear-gradient(135deg, #e63946, #ff758f);
-    color: white;
+    background: linear-gradient(135deg, var(--fasika-gold), var(--fasika-green));
+    color: #2c2c2c;
     text-align: center;
     padding: 25px 15px;
     font-size: 26px;
@@ -34,7 +35,7 @@ body {
     box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
-/* Floating hearts animation */
+/* Floating eggs / flowers animation */
 .heart-container {
     position: absolute;
     width: 100%;
@@ -46,20 +47,20 @@ body {
 
 .heart {
     position: absolute;
-    font-size: 18px;
-    animation: floatHearts 8s infinite ease-in-out;
-    opacity: 0.8;
+    font-size: 20px;
+    animation: floatEggs 8s infinite ease-in-out;
+    opacity: 0.9;
 }
 
-/* Different positions & delays */
+/* Positions */
 .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
 .heart:nth-child(2) { left: 20%; animation-delay: 2s; }
-.heart:nth-child(3) { left: 30%; animation-delay: 4s; }
+.heart:nth-child(3) { left: 35%; animation-delay: 4s; }
 .heart:nth-child(4) { left: 50%; animation-delay: 1s; }
 .heart:nth-child(5) { left: 70%; animation-delay: 3s; }
 .heart:nth-child(6) { left: 90%; animation-delay: 5s; }
 
-@keyframes floatHearts {
+@keyframes floatEggs {
     0% { bottom: -20px; opacity: 0; transform: scale(0.8); }
     50% { opacity: 1; }
     100% { bottom: 120%; opacity: 0; transform: scale(1.2); }
@@ -72,30 +73,29 @@ body {
     margin: 15px auto;
     width: fit-content;
     border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(230,57,70,0.15);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
 /* ===== TABS ===== */
 .tabs {
     display: flex;
     gap: 10px;
-    overflow-x: auto; /* allow horizontal scrolling */
+    overflow-x: auto;
     padding: 10px;
-    /* Remove justify-content: center; to prevent first tab from being hidden */
-    justify-content: flex-start; 
-    -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
-    scrollbar-width: none; /* hide scrollbar in Firefox */
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
 }
 
 .tabs::-webkit-scrollbar {
-    display: none; /* hide scrollbar in Chrome/Safari */
+    display: none;
 }
 
 .tab-btn {
-    flex: 0 0 auto; /* prevent buttons from shrinking */
+    flex: 0 0 auto;
     background: white;
-    border: 2px solid var(--valentine-pink);
-    color: var(--dark-red);
+    border: 2px solid var(--fasika-green);
+    color: var(--fasika-purple);
     padding: 10px 18px;
     border-radius: 30px;
     cursor: pointer;
@@ -105,10 +105,10 @@ body {
 
 .tab-btn:hover,
 .tab-btn.active {
-    background: var(--valentine-red);
+    background: var(--fasika-green);
     color: white;
-    border-color: var(--valentine-red);
-    box-shadow: 0 6px 15px rgba(230,57,70,0.4);
+    border-color: var(--fasika-green);
+    box-shadow: 0 6px 15px rgba(106,176,76,0.4);
 }
 
 /* ===== PACKAGES GRID ===== */
@@ -128,22 +128,21 @@ body {
     background: white;
     border-radius: 20px;
     padding: 20px;
-    box-shadow: 0 10px 30px rgba(230,57,70,0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
     position: relative;
     transition: all 0.4s ease;
     border: 2px solid transparent;
 }
 
-/* Valentine glow on hover */
 .card:hover {
     transform: translateY(-10px) scale(1.02);
-    border-color: var(--valentine-red);
-    box-shadow: 0 20px 40px rgba(230,57,70,0.35);
+    border-color: var(--fasika-green);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
 }
 
 /* Package title */
 .card h3 {
-    color: var(--valentine-red);
+    color: var(--fasika-green);
     font-size: 20px;
     text-align: center;
     margin-bottom: 10px;
@@ -151,8 +150,8 @@ body {
 
 /* Price */
 .price {
-    background: var(--soft-pink);
-    color: var(--dark-red);
+    background: var(--soft-green);
+    color: var(--fasika-purple);
     font-weight: bold;
     text-align: center;
     padding: 8px;
@@ -172,7 +171,7 @@ body {
     text-align: center;
     margin-top: 15px;
     padding: 12px;
-    background: linear-gradient(135deg, #e63946, #ff758f);
+    background: linear-gradient(135deg, var(--fasika-green), var(--fasika-gold));
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -182,11 +181,12 @@ body {
 
 .order-btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(230,57,70,0.5);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
+
 /* ===== FOOTER ===== */
 footer {
-    background: linear-gradient(135deg, #e63946, #b71c1c);
+    background: linear-gradient(135deg, var(--fasika-green), #2e7d32);
     color: white;
     text-align: center;
     padding: 20px 15px;
@@ -198,7 +198,7 @@ footer {
 }
 
 .footer-link {
-    color: #ffd6dc;
+    color: #e8ffe0;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -213,10 +213,46 @@ footer {
     text-shadow: 0 0 8px rgba(255,255,255,0.6);
 }
 
-/* Mobile responsiveness */
+/* ===== MOBILE ===== */
 @media (max-width: 600px) {
     footer {
         font-size: 13px;
         padding: 18px 10px;
     }
+}
+
+/* ===== PACKAGE IMAGE AREA ===== */
+.package-body{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+}
+
+.package-image{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* ===== IMAGE POPUP ===== */
+.image-modal{
+    display:none;
+    position:fixed;
+    z-index:999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+}
+
+.image-modal img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:10px;
 }
