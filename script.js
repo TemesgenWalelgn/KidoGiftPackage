@@ -86,7 +86,7 @@ function handleOrder(event) {
 // Initialize on Page Load
 // ==========================
 document.addEventListener('DOMContentLoaded', () => {
-    showTab('beal'); // set default tab
+    showTab('enat'); // set default tab
     
        // Attach the click handler to all 'Order Now' buttons
     const orderButtons = document.querySelectorAll('.order-btn');
