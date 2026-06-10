@@ -6,12 +6,12 @@
 
 /* ===== ROOT COLORS ===== */
 :root {
-    --fasika-gold: #f4c430;
-    --fasika-green: #6ab04c;
-    --fasika-light: #fffdf2;
-    --fasika-purple: #8e44ad;
-    --soft-green: #f0ffe6;
-    --text-dark: #3b2f2f;
+    --fasika-gold: #d4af37;   /* Gold */
+    --fasika-green: #1e3a5f;  /* Navy Blue */
+    --fasika-light: #f5f7fa;  /* Light Gray */
+    --fasika-purple: #2c3e50; /* Dark Blue */
+    --soft-green: #eaf2f8;
+    --text-dark: #222;
 }
 
 /* ===== GLOBAL STYLES ===== */
@@ -20,6 +20,17 @@ body {
     font-family: "Poppins", Arial, sans-serif;
     background: linear-gradient(to bottom, #fffdf2, #f0ffe6);
     color: var(--text-dark);
+}
+
+.countdown-box{
+    margin-top:15px;
+    display:inline-block;
+    background:rgba(255,255,255,0.2);
+    padding:10px 20px;
+    border-radius:15px;
+    font-size:18px;
+    font-weight:bold;
+    backdrop-filter:blur(5px);
 }
 
 /* ===== HEADER ===== */
