@@ -82,33 +82,7 @@ function handleOrder(event) {
     window.open(telegramUrl, '_blank');
 }
 
-function updateCountdown() {
 
-    // Father's Day 2026
-    const fathersDay = new Date("June 21, 2026 00:00:00").getTime();
-
-    const now = new Date().getTime();
-    const distance = fathersDay - now;
-
-    if(distance < 0){
-        document.getElementById("countdown").innerHTML =
-        "🎉 Happy Father's Day!";
-        return;
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24))
-                 / (1000 * 60 * 60));
-
-    const minutes = Math.floor((distance % (1000 * 60 * 60))
-                   / (1000 * 60));
-
-    const seconds = Math.floor((distance % (1000 * 60))
-                   / 1000);
-
-    document.getElementById("countdown").innerHTML =
-        `👔 Father's Day in ${days}d ${hours}h ${minutes}m ${seconds}s`;
-}
 
 setInterval(updateCountdown, 1000);
 updateCountdown();
@@ -117,7 +91,7 @@ updateCountdown();
 // Initialize on Page Load
 // ==========================
 document.addEventListener('DOMContentLoaded', () => {
-    showTab('abat'); // set default tab
+    showTab('setoch'); // set default tab
     
        // Attach the click handler to all 'Order Now' buttons
     const orderButtons = document.querySelectorAll('.order-btn');
