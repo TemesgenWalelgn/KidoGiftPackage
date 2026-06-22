@@ -6,12 +6,12 @@
 
 /* ===== ROOT COLORS ===== */
 :root {
-    --fasika-gold: #d4af37;   /* Gold */
-    --fasika-green: #1e3a5f;  /* Navy Blue */
-    --fasika-light: #f5f7fa;  /* Light Gray */
-    --fasika-purple: #2c3e50; /* Dark Blue */
-    --soft-green: #eaf2f8;
-    --text-dark: #222;
+    --fasika-gold: #f39c12;      /* Vibrant Gold */
+    --fasika-green: #27ae60;     /* Emerald Green */
+    --fasika-light: #ffffff;     /* Pure White */
+    --fasika-purple: #16a085;    /* Teal */
+    --soft-green: #f0fdf4;       /* Very Light Green tint */
+    --text-dark: #1a1a1a;
 }
 
 /* ===== GLOBAL STYLES ===== */
